@@ -16,25 +16,17 @@ class CalculateBodyDensityController {
             thigh
         } = req.body;
 
-        // Validate required fields
         if (!gender || !age || !weight || !triceps || !chest || !subAxillary || !subscapular || !abdominal || !supraIliac || !thigh) {
             return res.status(400).json({ success: false, error: 'Please provide all required measurements.' });
         }
 
         try {
-            const calculateBodyDensityService = new CalculateBodyDensityService();
-            const bodyDensity = await calculateBodyDensityService.execute({
+            const bodyDensity = CalculateBodyDensityService(
                 gender,
                 age,
                 weight,
-                triceps,
-                chest,
-                subAxillary,
-                subscapular,
-                abdominal,
-                supraIliac,
-                thigh
-            });
+                { triceps, chest, subAxillary, subscapular, abdominal, supraIliac, thigh }
+            );
 
             return res.status(200).json({ success: true, bodyDensity });
         } catch (error: any) {

@@ -16,22 +16,19 @@ interface BodyDensityResult {
   category: string;
 }
 
-export const calculateBodyDensityService = (
+export const CalculateBodyDensityService = (
   gender: string,
   age: number,
   weight: number,
   measurements: SkinfoldMeasurements
 ): BodyDensityResult => {
-  // Calculate the sum of skinfold measurements
+
   const sumOfFolds = Object.values(measurements).reduce((acc, value) => acc + value, 0);
   
-  // Calculate body density
   const bodyDensity = 1.097 - (0.00046971 * sumOfFolds) + (0.00000056 * Math.pow(sumOfFolds, 2)) - (0.00012828 * age);
 
-  // Calculate body fat percentage
   const bodyFatPercentage = ((4.95 / bodyDensity) - 4.5) * 100;
 
-  // Get classification based on gender and age
   const ageRange = getAgeRange(age);
   const classification = bodyFatClassification[gender]?.[ageRange];
 
