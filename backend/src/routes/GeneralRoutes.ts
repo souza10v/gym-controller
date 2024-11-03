@@ -1,11 +1,11 @@
 import { Router } from 'express';
-import { calcularDensidadeCorporal } from '../controllers/BodyFatController';
+import { CalculateBodyDensityController } from '../controllers/BodyFatController';
 
-const router = Router();
+const generalRoutes = Router();
+const calculateBodyDensityController = new CalculateBodyDensityController();
 
-// Defina a rota para o cálculo de densidade corporal
-router.post('/calcular-densidade-corporal', calcularDensidadeCorporal);
+// Definindo a rota com o controlador corretamente
+generalRoutes.post('/calcular-densidade-corporal', calculateBodyDensityController.handle);
 
-export default router;
-
+export default generalRoutes;
 
