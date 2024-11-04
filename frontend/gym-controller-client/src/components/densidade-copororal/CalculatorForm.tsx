@@ -102,7 +102,7 @@ const CalculatorForm: React.FC = () => {
                         )}
                     </FormControl>
                     <TextField
-                        label="Idade"
+                        label="Idade (anos)"
                         name="age"
                         type="number"
                         value={formik.values.age}
@@ -122,7 +122,7 @@ const CalculatorForm: React.FC = () => {
                         fullWidth
                     />
                     <TextField
-                        label="Tríceps"
+                        label="Tríceps (mm)"
                         name="triceps"
                         type="number"
                         value={formik.values.triceps}
@@ -132,7 +132,7 @@ const CalculatorForm: React.FC = () => {
                         fullWidth
                     />
                     <TextField
-                        label="Peito"
+                        label="Peito (mm)"
                         name="chest"
                         type="number"
                         value={formik.values.chest}
@@ -142,7 +142,7 @@ const CalculatorForm: React.FC = () => {
                         fullWidth
                     />
                     <TextField
-                        label="Subaxilar"
+                        label="Subaxilar (mm)"
                         name="subAxillary"
                         type="number"
                         value={formik.values.subAxillary}
@@ -152,7 +152,7 @@ const CalculatorForm: React.FC = () => {
                         fullWidth
                     />
                     <TextField
-                        label="Subescapular"
+                        label="Subescapular (mm)"
                         name="subscapular"
                         type="number"
                         value={formik.values.subscapular}
@@ -162,7 +162,7 @@ const CalculatorForm: React.FC = () => {
                         fullWidth
                     />
                     <TextField
-                        label="Abdominal"
+                        label="Abdominal (mm)"
                         name="abdominal"
                         type="number"
                         value={formik.values.abdominal}
@@ -172,7 +172,7 @@ const CalculatorForm: React.FC = () => {
                         fullWidth
                     />
                     <TextField
-                        label="Suprailiaca"
+                        label="Suprailiaca (mm)"
                         name="supraIliac"
                         type="number"
                         value={formik.values.supraIliac}
@@ -182,7 +182,7 @@ const CalculatorForm: React.FC = () => {
                         fullWidth
                     />
                     <TextField
-                        label="Coxa"
+                        label="Coxa (mm)"
                         name="thigh"
                         type="number"
                         value={formik.values.thigh}
