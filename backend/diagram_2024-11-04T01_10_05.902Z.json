@@ -3,8 +3,8 @@
     {
       "id": 0,
       "name": "user",
-      "x": -107.02734375000006,
-      "y": 39.41796875000006,
+      "x": -145.39843750000006,
+      "y": -49.40624999999994,
       "fields": [
         {
           "name": "id",
@@ -82,6 +82,20 @@
           "increment": false,
           "comment": "",
           "id": 5,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "isAdmin",
+          "type": "BOOLEAN",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 6,
           "size": "",
           "values": []
         }
